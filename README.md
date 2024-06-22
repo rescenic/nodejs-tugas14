@@ -24,4 +24,4 @@ npm run dev
 
 #### 2. Create POST /api/products
 
-![npm run dev](docs/nodejs-tugas-10-2.png)
+![npm run dev](docs/nodejs-tugas-10-3.png)

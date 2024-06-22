@@ -19,7 +19,7 @@ export default {
             Yup.object().shape({
               name: Yup.string().required(),
               price: Yup.number().required(),
-              category: Yup.string().required(),
+              categoryId: Yup.string().required(),
               description: Yup.string().required(),
               images: Yup.array().of(Yup.string()).required().min(1),
               qty: Yup.number().required().min(1),
