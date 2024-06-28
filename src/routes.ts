@@ -1,6 +1,8 @@
 // src/routes.ts
 
 import express from "express";
+import authController from "./controllers/auth.controller";
+import authMiddleware from "./middlewares/auth.middleware";
 
 import uploadMiddleware from "./middlewares/upload.middleware";
 import uploadController from "./controllers/upload.controller";
@@ -8,6 +10,10 @@ import productsController from "./controllers/products.controller";
 import categoryController from "./controllers/category.controller";
 
 const router = express.Router();
+
+router.post("/auth/register", authController.register);
+router.post("/auth/login", authController.login);
+router.get("/auth/me", authMiddleware, authController.me);
 
 router.get("/products", productsController.findAll);
 router.post("/products", productsController.create);
